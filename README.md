@@ -120,4 +120,10 @@ TaleWorlds.* assemblies; output is a module DLL.
   for the NativeHook module whose hook recipe our managed native hooks
   (`NativeTargetGuard`, `NativeSteerOverride`) are based on.
 - **EasyHook** — the `LocalHook` infrastructure used by the native hooks.
+- **Arena Overhaul / ArenaOverhaulRedux** — the arena mod we integrate with
+  (extended practice, duels, cavalry and team-practice support in
+  `ArenaOverhaulBridge` and the arena patch files).
+- **MasterStrikes** — optional soft-dependency: master-strike and clinch
+  counters and animated dodge clips (`MasterStrikesBridge`, `Compat`,
+  `HarmonyPatches`; reflection-only, silently off when absent).
 - **Harmony**, **MCM** — patching and settings infrastructure.
