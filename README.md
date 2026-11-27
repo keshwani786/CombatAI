@@ -71,6 +71,14 @@ TaleWorlds.* assemblies; output is a module DLL.
 
 ## Systems worth mining
 
+- **Free camera / free attack** — the engine target lock stays on the current
+  enemy while the agent's body facing is steered independently: side swings
+  land without looking at the target, and a defender keeps multiple attackers
+  in view at once. Native movement intent is captured in world space and
+  re-expressed in the steered body frame so locomotion stays correct while
+  facing elsewhere. Free-target/free-face modes drive locomotion and defense
+  with no target lock at all. (`GroupTarget.cs` look computation, the
+  translator in `GroupFight.cs`, facing writers in the main component.)
 - **Dodge logic** — `AngleDodge` plus the dodge blocks in the main component:
   staged side/back steps triggered on the enemy's windup edge, mirrored to the
   swing direction, kick dodges for kicks.
