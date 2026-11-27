@@ -112,3 +112,12 @@ TaleWorlds.* assemblies; output is a module DLL.
 - Ships inside a host Bannerlord module; `SubModule.xml` and module metadata
   are not included here.
 - Shared for design discussion.
+
+## Credits
+
+- **shortjake** — for the SJ debug build of `TaleWorlds.Native.dll` (named
+  symbols + assert strings) that made the native-layer research possible, and
+  for the NativeHook module whose hook recipe our managed native hooks
+  (`NativeTargetGuard`, `NativeSteerOverride`) are based on.
+- **EasyHook** — the `LocalHook` infrastructure used by the native hooks.
+- **Harmony**, **MCM** — patching and settings infrastructure.
