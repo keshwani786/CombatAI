@@ -1,8 +1,21 @@
 # CombatAI
 
-A Mount & Blade II: Bannerlord mod that replaces per-agent melee combat behavior:
-targeting, movement, attack timing, blocking and dodging — driven by a per-agent
-combat FSM layered on top of native systems rather than replacing them wholesale.
+Overhauling Bannerlord's low-level infantry AI: aggressive instead of passive.
+Vanilla melee AI spends most of its time blocking and circling — this mod gives
+infantry real attack initiative (tempo and turn-taking so agents attack in
+rhythm, riposte after blocks, press advantages) *and* a defensive brain that
+scales with the situation:
+
+- **1v1** — directional block/parry reads, dodges, and per-attack-type "fall
+  for" chances so held attacks and feints genuinely bait defenders instead of
+  everything being blocked.
+- **2v1** — a defender layer: the outnumbered agent targets only the enemies
+  attacking it, keeps them in view with a free camera, defends first, while
+  coordinated attacker positioning keeps it from being surrounded.
+- **Group fights** — fluid, coordinated target selection (swaps, cover
+  handoffs, an attackers-per-target cap, "enemy on me" priority) layered on
+  native targeting and movement, plus sudden quick-switch attacks that are
+  harder to defend than a swing from a known target.
 
 .NET Framework 4.7.2 · Harmony 2 · MCM v5 · builds against the installed game's
 TaleWorlds.* assemblies; output is a module DLL.
